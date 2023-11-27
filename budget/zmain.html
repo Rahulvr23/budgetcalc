@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-1">                <button type="button" class="btn btn-danger mt-1" onclick="logout()">Logout</button></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"><form id="form1" class="mt-5">
+            <h3>Add Money</h3>
+            <div class="mb-3">
+
+                <input type="email" class="form-control" id="Type" placeholder="type">
+                
+                <input type="email" class="form-control mt-3" id="amount" placeholder="Enter Amount">
+                <button type="button" class="btn btn-primary mt-3" onclick="add()">Add</button>
+              </div>
+        </form>
+    
+        <form  class="mt-5" id="form2">
+            <h3>Expense</h3>
+            <div class="mb-3">
+
+                <input type="email" class="form-control" id="Type1" placeholder="type">
+                
+                <input type="email" class="form-control mt-3" id="amount1" placeholder="Enter Amount">
+                <button type="button" class="btn btn-primary mt-3" onclick="sub()">Submit</button>
+              </div>
+        </form>
+    <div class="row mt-5">
+        <div class="col-lg-6 bg-success" ><h3 class="text-white text-center">Balance</h3><h3 class="text-white text-center" id="showtot">0</h3></div>
+        <div class="col-lg-6  bg-danger">
+<h3 class="text-center text-white">Spent</h3>
+            <h3 class="text-white text-center" id="showexp">0</h3>
+        </div>
+    </div>
+    
+    
+    </div>
+        <div class="col-lg-4"></div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 mt-5" >
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Balance</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody id="bill"></tbody>
+            </table>
+
+
+            
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+<script src="/script2.js"></script>
+</body>
+</html>
